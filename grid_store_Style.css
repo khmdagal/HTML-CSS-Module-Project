@@ -1,0 +1,111 @@
+:root {
+    --font-size: 2em;
+    --bckgrnd-color: greenyellow;
+}
+
+body {
+    background-color: var(--bckgrnd-color);
+    /* width: 100%; */
+    height: 100%;
+    display: grid;
+    grid:
+        "h h h"
+        "fm fm p"
+        "f f f";
+        gap: 40px;
+}
+
+header {
+    grid-area: h;
+    border: solid;
+    background-color: bisque;
+}
+
+fieldset {
+    border: solid;
+    grid-area: fm;
+    background-color: chocolate;
+    width: 100%;
+    height: 98%;
+}
+form{
+  display: grid;
+  grid: 
+  "h h h h"
+  "fl fl fl fl"
+  "a a a a"
+  "sp sp sp sp"
+  "c c c c"
+  "t t t t"
+  "f . . ."
+  ;
+  border: solid;
+  padding: 15px;
+}
+header{grid-area:h;}
+.firstAndSecondNames_container {grid-area:fl;}
+.address1and2{grid-area: a;}
+.city_postcode_container{grid-area:sp;}
+.color_selection_container{grid-area:c;}
+.terms_section{grid-area:t;}
+.order_btn{grid-area:f;}
+
+
+/* name fields */
+.firstAndSecondNames_container {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+
+.firstAndSecondNames_container > * .input_field{
+    width: 100%;
+} 
+
+/* address fields */
+.address1and2{
+    display: block;
+    width: 100%;
+    border: solid;
+}
+
+.address1and2 > * .input_field{
+    width: 90%;
+}
+
+/* all input fields */
+.input_field {
+  height: 25px;
+  border-radius: 4px;
+}
+
+/* city and post code fields */
+.city_postcode_container{
+    grid-area:c;
+    display: flex;
+}
+
+/* .city_postcode_container > * .input_field{
+    width: 100%;
+} */
+
+
+.color_selection_container{
+    display: flex;
+}
+
+
+
+
+
+
+img {
+    grid-area: p;
+    width: 500px;
+}
+
+footer {
+    grid-area: f;
+    border: solid;
+    background-color: darkkhaki;
+}
